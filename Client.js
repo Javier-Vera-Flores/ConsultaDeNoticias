@@ -1,6 +1,6 @@
 //const fetch = require('node-fetch');
 const apiKey = '853ac98bcc4f4278931004f32452d494';
-const country = 'mx';
+const country = 'us';
 //Se establece el end point de News API
 const url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`;
 
@@ -31,7 +31,7 @@ function MostrarNoticias(articulos){
         const formatoDeArticle = `
     Noticia ${index + 1}:
     \tTítulo: ${articulo.title}
-    \tDescripción: ${articulo.description || 'Sin descripción disponible.'}
+    \tDescripción: ${articulo.description}
     \tFuente: ${articulo.source.name}
     \tPublicado: ${articulo.publishedAt}
     \tEnlace: ${articulo.url}
